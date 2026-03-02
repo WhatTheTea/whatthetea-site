@@ -1,9 +1,14 @@
 ---
+import { Image } from 'astro:assets';
+import neocities from "../assets/neocities-host.png"
 const today = new Date();
 ---
 
 <footer>
-	<i>Виживи, все лише починається</i>
+	<div>
+		<i>Виживи, все лише починається</i>
+	</div>
+	<Image src={neocities} alt={"hosted by neocities"}></Image>
 </footer>
 <style>
 	footer {
