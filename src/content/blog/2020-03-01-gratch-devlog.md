@@ -111,6 +111,6 @@ So, I dug up some files from the past and I think it would be kinda fun to see m
 
 # Bonus
 There was also several graphics to glimpse upon, take a look!)
-![gratch-logo](/assets/img/posts/2020-03-01-gratch-devlog/gratch-logo.png)
-![gratch-excel](/assets/img/posts/2020-03-01-gratch-devlog/gratch-excel.png)
-![gratch-poster](/assets/img/posts/2020-03-01-gratch-devlog/gratch-poster.png)
+![gratch-logo](../../assets/blog/2020-03-01-gratch-devlog/gratch-logo.png)
+![gratch-excel](../../assets/blog/2020-03-01-gratch-devlog/gratch-excel.png)
+![gratch-poster](../../assets/blog/2020-03-01-gratch-devlog/gratch-poster.png)
