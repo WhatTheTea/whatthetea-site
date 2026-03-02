@@ -3,6 +3,9 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+import vibecar from "../assets/pages/home/car-vibe.jpg"
+import { Image } from 'astro:assets';
 ---
 
 <!doctype html>
@@ -12,8 +15,37 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 	</head>
 	<body>
 		<Header />
-		<main>
-			<h1>TBD</h1>
+		<main class="prose">
+			<h2 class="text-center">Welcome</h2>
+			<div class="flex">
+				<div>
+					<p>
+						Hello, my name is Alex! I develop desktop and web software for a living.
+					</p>
+
+					<p>
+						Sometimes I play guitar, sometimes do some funky digital drawings / edits, 
+						like the one that happen to became my "logo".  
+					</p>
+
+					<p>
+						I like games and hardware from the 80s - 90s, have a retro car (VW Jetta 2)
+						and this is my space for things and thoughts. 
+					</p>
+				</div>
+				<span class="w-prose">
+					<Image src={vibecar} alt={"coffee on the steering wheel of VW Jetta 2"}></Image>
+				</span>
+			</div>
+
+			<p>
+				I built this place using Astro and VS Code primarely to return to my
+				efforts of writing blogs to enhance my writing skills. <a href="/blog/2026-03-02-neo-astro">(post)</a>  
+				
+				There is not much for now, I don't have any big artistic visions for this site yet 
+				and its origin was github pages Jekyll generated blog, but I hope, as everything do, this site 
+				will change with the flow of time.   
+			</p>
 		</main>
 		<Footer />
 	</body>

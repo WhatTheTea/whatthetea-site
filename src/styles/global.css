@@ -87,6 +87,15 @@ a:hover {
 p {
 	margin-bottom: 1em;
 }
+
+.prose {
+	width: 720px;
+	max-width: calc(100% - 2em);
+	margin: auto;
+	padding: 1em;
+	color: rgb(var(--gray-dark));
+}
+
 .prose p {
 	margin-bottom: 2em;
 }
