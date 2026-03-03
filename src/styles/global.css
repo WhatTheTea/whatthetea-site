@@ -35,8 +35,6 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: rgb(var(--gray-dark));
@@ -45,7 +43,6 @@ body {
 }
 main {
 	width: 720px;
-	max-width: calc(100% - 2em);
 	margin: auto;
 	padding: 3em 1em;
 }
@@ -94,6 +91,8 @@ p {
 	margin: auto;
 	padding: 1em;
 	color: rgb(var(--gray-dark));
+	background-color: #fafaf0;
+	border-radius: 0.5rem;
 }
 
 .prose p {
