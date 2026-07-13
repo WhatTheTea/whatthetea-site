@@ -1,0 +1,10 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+
+
+type Props = CollectionEntry<'books'>['data'];
+const { title, author, description, year, coverImage } = Astro.props;
+---
+
+<Image src={coverImage} alt={`${title} cover`} class="w-48 h-auto" />
