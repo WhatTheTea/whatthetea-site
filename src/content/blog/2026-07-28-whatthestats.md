@@ -43,6 +43,10 @@ classDiagram
 
 With TDD I didn't have to waste API requests for each change in language usage rating or output format. Yeah, there are broader limits if you provide PAT, and I, in fact, implemented provisioning it. Instead of waiting for the API to respond, I spent this time writing unit tests, which was more fun and ensured I didn't break something each time something changed.
 
+It was pleasant to work with Octokit, as there were abstractions I needed for the unit testing in the library. This way using NSubstitute was just enough and I was free from the writing wrappers in order for dependencies to be injectable.
+
+I was planning to just append the stats to the end of the readme file and call it a day. But then I remembered about the code block notation, especially the syntax highlight hinting. This way, tool just ignores the file if there's no `wts-languages` section in the file. Updating the file is also easier this way, as I could just clear all the text in the code block.
+
 There's still work to be done, though. Using this tool is kinda funky, but was easier to implement. [GitHub Action](https://github.com/WhatTheTea/WhatTheTea/blob/c96772764ebaf6279b5fc95c559b858bae97f4fb/.github/workflows/wts.yml) in the target special username repository builds dotnet project from the [whatthestats](https://github.com/WhatTheTea/whatthestats) repo, runs it and then applies the changes made by the tool.
 
 This way I made customizable stats for myself that end up rendering as intended on any theme used. I hope there'll be 1-2 evenings to play with this project again, as the idea of comitting changes via automation is pretty interesting.
