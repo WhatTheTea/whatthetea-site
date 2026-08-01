@@ -21,7 +21,9 @@ const { books } = Astro.props;
           class="book-item m-0 p-0"
           aria-label={`View details for ${book.data.title}`}
           @click={`activeBook = ${JSON.stringify(book)}`}>
-          <Image src={book.data.coverImage} alt={`Cover of ${book.data.title}`} class="book-cover border-rd-0" />
+          <Image src={book.data.coverImage} 
+            alt={`Cover of ${book.data.title}`} 
+            class="book-cover border-rd-0" />
         </button>
       ))
     }
@@ -106,7 +108,7 @@ const { books } = Astro.props;
   }
 
   .book-item + .book-item {
-  margin-left: -8rem; /* Adjust this value to control overlap amount */
+  margin-left: -9rem; /* Adjust this value to control overlap amount */
 }
 
   .book-cover {
@@ -114,7 +116,6 @@ const { books } = Astro.props;
     height: 180px; */
     width: 12rem;
     object-fit: cover;
-    border-left: 8px solid antiquewhite;
     box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.3);
     display: block;
   }
@@ -127,6 +128,7 @@ const { books } = Astro.props;
   .book-item:hover,
   .book-item:focus-visible {
     transform: translateY(-24px) scale(1.03);
+    z-index: 1;
   }
 
   /* Wooden Shelf Base */

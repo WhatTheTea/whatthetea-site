@@ -11,7 +11,7 @@ import Bookshelf from "./bookshelf.astro";
 const books = await getCollection("books");
 
 books.sort(
-    (a, b) => b.data.readDate.valueOf() - a.data.readDate.valueOf(),
+    (a, b) => a.data.readDate.valueOf() - b.data.readDate.valueOf(),
 );
 ---
 <!doctype html>

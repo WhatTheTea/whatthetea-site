@@ -1,7 +1,7 @@
 ---
 title: A Philosophy of Software Design
 description: test
-coverImage: ./cover-aposd.png
+coverImage: covers/cover-aposd.png
 author: John Ousterhout
 year: 2021
 readDate: 2026-07-13
