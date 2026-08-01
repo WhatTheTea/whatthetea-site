@@ -10,7 +10,7 @@ const { books } = Astro.props;
 ---
 
 <div 
-  class="bookshelf-container flex flex-col min-h-screen"
+  class="bookshelf-container  flex flex-col min-h-screen-sm"
   x-data="{ activeBook: null }"
 >
   <!-- Shelf Items Grid -->
@@ -18,10 +18,10 @@ const { books } = Astro.props;
     {
       books.map((book) => (
         <button
-          class="book-item"
+          class="book-item m-0 p-0"
           aria-label={`View details for ${book.data.title}`}
           @click={`activeBook = ${JSON.stringify(book)}`}>
-          <Image src={book.data.coverImage} alt={`Cover of ${book.data.title}`} class="book-cover" />
+          <Image src={book.data.coverImage} alt={`Cover of ${book.data.title}`} class="book-cover border-rd-0" />
         </button>
       ))
     }
@@ -84,33 +84,43 @@ const { books } = Astro.props;
   /* Bookshelf Container */
   .bookshelf-container {
     max-width: 900px;
+    /* margin-top: ; */
     padding: 0 1rem;
   }
 
   .shelf-grid {
     display: flex;
     align-items: flex-end;
-    gap: 1.5rem;
-    padding: 0 2rem;
+    /* padding: 2rem 2rem 0; */
   }
 
   /* Hover & Slide Effect */
   .book-item {
     background: none;
     border: none;
-    padding: 0;
     cursor: pointer;
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
     outline-offset: 4px;
+
+    transform: rotateX(7deg) rotateY(-13deg);
   }
 
+  .book-item + .book-item {
+  margin-left: -8rem; /* Adjust this value to control overlap amount */
+}
+
   .book-cover {
-    width: 120px;
-    height: 180px;
+    /* width: 120px;
+    height: 180px; */
+    width: 12rem;
     object-fit: cover;
-    border-radius: 4px 8px 8px 4px;
+    border-left: 8px solid antiquewhite;
     box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.3);
     display: block;
+  }
+
+  .book-cover:hover{
+    border-left: none;
   }
 
   /* Slide up on hover/focus */
@@ -144,7 +154,7 @@ const { books } = Astro.props;
   /* Modal Dialog Card */
   .modal-card {
     background: #ffffff;
-    border-radius: 12px;
+    border-radius: 0px;
     padding: 2rem;
     position: relative;
     max-width: 550px;
@@ -175,8 +185,7 @@ const { books } = Astro.props;
   }
 
   .modal-cover {
-    width: 130px;
-    height: 195px;
+    width: 12em;
     object-fit: cover;
     border-radius: 6px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
