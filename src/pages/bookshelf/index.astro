@@ -5,7 +5,8 @@ import Content from "../../components/Content.astro";
 import Footer from "../../components/Footer.astro";
 import Header from "../../components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
-import Book from "../../components/Book.astro";
+// import Book from "../../components/Book.astro";
+import Bookshelf from "./bookshelf.astro";
 
 const books = await getCollection("books");
 
@@ -21,13 +22,14 @@ books.sort(
     <body class="flex flex-col min-h-screen">
         <Header />
         <Content class:list={["flex-1"]}>
-            <ul>
+            <!-- <ul>
                 {books.map((book) => (
                     <li>
                         <Book {...book.data} />
                     </li>
                 ))}
-            </ul>
+            </ul> -->
+            <Bookshelf books={books} />
         </Content>
         <Footer />
     </body>

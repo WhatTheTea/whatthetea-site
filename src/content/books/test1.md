@@ -1,7 +1,7 @@
 ---
 title: test
 description: test
-coverImage: ../../assets/logo.webp
+coverImage: ./cover-aposd.png
 author: test
 year: 2002
 readDate: 2026-07-13
