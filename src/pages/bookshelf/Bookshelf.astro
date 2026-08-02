@@ -67,8 +67,9 @@ const { books } = Astro.props;
               <p class="meta">
                 <!-- <strong>Pages:</strong> <span x-text="activeBook.data."></span> |  -->
                 <!-- <strong>Rating:</strong> <span x-text="activeBook.rating"></span> -->
+                 <span x-text="activeBook.data.description"></span>
               </p>
-              <p class="description" x-text="activeBook.body"></p>
+              <p class="description" x-html="activeBook.rendered.html"></p>
             </div>
           </div>
         </template>
