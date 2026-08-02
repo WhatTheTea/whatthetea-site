@@ -16,7 +16,7 @@ const { books } = Astro.props;
   <!-- Shelf Items Grid -->
   <div class="shelf-grid">
     {
-      books.map((book) => (
+      books?.map((book) => (
         <button
           class="book-item m-0 p-0"
           aria-label={`View details for ${book.data.title}`}
