@@ -1,7 +1,7 @@
 ---
 title: "Local AI Autocomplete" 
 pubDate: 2026-09-22
-tags: dotnet
+tags: ai
 ---
 
 I like the whole concept of accelerating human development with some quality of life improvements. But I am always cautious of avoiding 
